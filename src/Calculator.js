@@ -1,4 +1,3 @@
-
 class Calculator {
     static add(numbers) {
         const num = this.splitter(numbers);
@@ -33,8 +32,7 @@ class Calculator {
         } else if (this.isCustomDelimiterString(numbers)) {
             return this.splitUsingCustomDelimiter(numbers);
         } else {
-            return numbers.split(/[,
-]/);
+            return numbers.split(/[,]/);
         }
     }
 
@@ -43,13 +41,10 @@ class Calculator {
     }
 
     static splitUsingCustomDelimiter(numbers) {
-        const delimiterMatch = numbers.match(/^\/\/(.+)
-/);
+        const delimiterMatch = numbers.match(/^\/\/(.+)/);
         const delimiter = delimiterMatch ? delimiterMatch[1] : ",";
-        const numbersWithoutDelimiter = numbers.replace(/^\/\/(.+)
-/, "");
-        return numbersWithoutDelimiter.split(new RegExp(`[${delimiter}
-]`));
+        const numbersWithoutDelimiter = numbers.replace(/^\/\/(.+)/, "");
+        return numbersWithoutDelimiter.split(new RegExp(`[${delimiter}]`));
     }
 
     static toInt(value) {
@@ -58,4 +53,4 @@ class Calculator {
 }
 
 // Export the Calculator class for use in other modules or files
-module.exports = Calculator;
+export default Calculator;
