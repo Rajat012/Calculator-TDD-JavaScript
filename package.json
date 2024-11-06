@@ -1,0 +1,13 @@
+{
+    "name": "calculator-project",
+    "version": "1.0.0",
+    "description": "A project for the Calculator class in JavaScript",
+    "main": "src/Calculator.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "jest": "^29.0.0"
+    }
+}
